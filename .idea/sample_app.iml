@@ -12,6 +12,12 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="annotate-models" version="1.0.4" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rails" version="3.0.6" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
@@ -74,6 +80,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.5.0, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/rspec-expectations-2.5.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.5.1, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.5.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.4, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/nokogiri-1.4.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] spork (v0.9.0.rc4, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/spork-0.9.0.rc4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.6, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/activemodel-3.0.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.9, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/arel-2.0.9)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/mime-types-1.16)" level="application" />
@@ -89,7 +96,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] thor (v0.14.6, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/thor-0.14.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] builder (v2.1.2, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/builder-2.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.16, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/mail-2.2.16)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] spork (v0.9.0.rc4, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/spork-0.9.0.rc4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] annotate-models (v1.0.4, /Users/chein/.rvm/gems/ruby-1.9.2-p180/gems/annotate-models-1.0.4)" level="application" />
   </component>
 </module>
 
