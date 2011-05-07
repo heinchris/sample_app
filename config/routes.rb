@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
+  resources :boozes
 
-  get "users/new"
+  devise_for :users
 
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
