@@ -8,9 +8,27 @@ class BoozeUserController < ApplicationController
       format.xml  { render :xml => @booze }
     end
   end
+  #get /booze/rerate/1
+  def rerate
+    @booze = Booze.find(params[:id])
+    @booze_user = @booze.booze_users.select{|b| b.user == current_user}[0]
+  end
+
+  def update
+    @booze_user = BoozeUser.find(params[:id])
+
+    respond_to do |format|
+      if @booze_user.update_attributes(params[:booze_user])
+        format.html { redirect_to(boozes_url, :notice => 'Booze was successfully updated.') }
+      else
+        format.html { render :action => "rerate" }
+      end
+    end
+  end
 
   def remove
   end
+
 
 
   # POST /boozes/create

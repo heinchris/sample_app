@@ -4,6 +4,7 @@ class BoozesController < ApplicationController
   def index
     @boozes = Booze.all
     @booze = Booze.new
+    @current_user = current_user
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @boozes }

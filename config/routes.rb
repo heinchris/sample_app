@@ -2,9 +2,8 @@ SampleApp::Application.routes.draw do
 
   match 'booze_user/:id/add' => 'booze_user#add', :as => :booze_user_add
   match 'booze_user/create' => 'booze_user#create', :as => :booze_users
-
-
-  get "booze_user/remove"
+  match 'booze_user/:id/rerate' => 'booze_user#rerate', :as => :booze_user_rerate
+  match 'booze_user/update/:id' => 'booze_user#update', :as => :booze_user
 
   resources :boozes
 

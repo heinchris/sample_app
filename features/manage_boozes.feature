@@ -40,15 +40,18 @@ Feature: Manage boozes
         |name|rating|
         |Pinot Grigio|5|
       And I am on the list boozes page
-    When I follow "Add"
-
-      And I fill in "5" for "User rating"
-      And I press "Create Booze user"
+    When I follow "Add to My Boozes"
+      And I fill in "1" for "User rating"
+      And I press "Update My Rating"
     Then I should see the following boozes:
-    |Name|Rating|
-        |Pinot Grigio|5|
-    
-    
+    |Name|Rating|Your Rating|
+            |Pinot Grigio|5|1|
+    When I follow "Change My Rating"
+      And I fill in "2" for "User rating"
+      And I press "Update My Rating"
+    Then I should see the following boozes:
+    |Name|Rating|Your Rating|
+            |Pinot Grigio|5|2|
     
     
 

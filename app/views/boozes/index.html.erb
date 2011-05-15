@@ -4,8 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Rating</th>
-    <th></th>
-    <th></th>
+    <th>Your Rating</th>
     <th></th>
     <th></th>
   </tr>
@@ -14,10 +13,10 @@
   <tr>
     <td><%= booze.name %></td>
     <td><%= booze.rating %></td>
-    <td><%= link_to 'Show', booze %></td>
-    <td><%= link_to 'Edit', edit_booze_path(booze) %></td>
-    <td><%= link_to 'Destroy', booze, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'Add', booze_user_add_path (booze.id) %></td>
+    <td><%= booze.get_user_rating(@current_user) %></td>
+    <td><%= link_to 'Edit Booze Info', edit_booze_path(booze) %></td>
+    <td><%= link_to 'Delete', booze, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= render_user_link(booze, @current_user) %> </td>
   </tr>
 <% end %>
 </table>

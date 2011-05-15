@@ -10,14 +10,6 @@ describe BoozesController do
     @mock_booze ||= mock_model(Booze, stubs).as_null_object
   end
 
-  describe "GET index" do
-    it "assigns all boozes as @boozes" do
-      Booze.stub(:all) { [mock_booze] }
-      get :index
-      assigns(:boozes).should eq([mock_booze])
-    end
-  end
-
   describe "GET show" do
     it "assigns the requested booze as @booze" do
       Booze.stub(:find).with("37") { mock_booze }
