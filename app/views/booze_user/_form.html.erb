@@ -1,0 +1,20 @@
+<p>
+  <b>Name:</b>
+  <%= @booze.name %>
+</p>
+
+<p>
+  <b>General Rating:</b>
+  <%= @booze.rating %>
+</p>
+<%= form_for(@booze_user) do |f| %>
+  <% @booze_user.booze = @booze %>
+    <%= f.hidden_field(:booze_id,  :value => @booze.id) %>
+  <div class="field">
+    <%= f.label :user_rating %><br />
+    <%= f.text_field :user_rating %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update My Rating" %>
+  </div>
+<% end %>

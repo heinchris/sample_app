@@ -1,11 +1,19 @@
 SampleApp::Application.routes.draw do
-  resources :users
+
+  match 'booze_user/:id/add' => 'booze_user#add', :as => :booze_user_add
+  match 'booze_user/create' => 'booze_user#create', :as => :booze_users
+  match 'booze_user/:id/rerate' => 'booze_user#rerate', :as => :booze_user_rerate
+  match 'booze_user/update/:id' => 'booze_user#update', :as => :booze_user
+
+  resources :boozes
+
+  devise_for :users
 
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
   match 'signup', :to => 'users#new'
-
+  # Route for add booze
   root :to => 'pages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.

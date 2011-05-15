@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @booze.name %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @booze.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_booze_path(@booze) %> |
+<%= link_to 'Back', boozes_path %>
